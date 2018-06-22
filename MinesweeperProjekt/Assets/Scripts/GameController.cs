@@ -5,20 +5,36 @@ using UnityEngine.UI;
 
 
 public class GameController : MonoBehaviour {
-    [SerializeField]
-    private int Zahl = 0;
     public int sizeH = 9;
     public int sizeW = 9;
     public Button Smiley_Normal;
     public Button Smiley_Erstaunt;
     public Button Smiley_Cool;
     public Button Smiley_Traunrig;
-    public GameObject BackgroundPlane;
+    public GameObject Block;
+
+    
 
     void Start()
     {
-        BackgroundPlane.transform.localScale = new Vector3(sizeW, transform.localScale.y, sizeH+3);
+    }
 
+    void Update()
+    {
+        GridGen();
+    }
+
+    GameObject GridGen()
+    {
+        int size = sizeH * sizeW;
+        GameObject[] GridBlock = new GameObject[size];
+        for (int y = 0; y < sizeH; y++)
+        {
+            GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            cube.transform.position += new Vector3(0, 1, 0);
+            return cube;
+        }
+        return null;
     }
 
 }
