@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B001919C-18A3-D42C-2F2B-CCCDB9C9BB1A}</ProjectGuid>
+    <ProjectGuid>{3F04FBB1-B0AE-27A3-12ED-B942D1E8234B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,8 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\blocks.cs" />
-     <Compile Include="Assets\fieldGenerator.cs" />
+     <Compile Include="Assets\Scripts\Blocks.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
