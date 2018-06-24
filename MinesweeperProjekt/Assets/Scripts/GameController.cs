@@ -13,18 +13,20 @@ public class GameController : MonoBehaviour {
     public Button Smiley_Traunrig;
     public GameObject cube;
     public GameObject plane;
+    public Camera maincamera;
     
 
     void Start()
     {
         GridGen();
+        
     }
 
     void Update()
     {
     }
 
-    GameObject GridGen()
+    void GridGen()
     {
         for (int y = 0; y < sizeH; y++)
         {
@@ -32,7 +34,7 @@ public class GameController : MonoBehaviour {
             {
                 GameObject cubes = Instantiate(cube);
                 cubes.transform.position += new Vector3(x, y, 0);
-                //Debug.Log("Block");
+                cubes.transform.SetParent(transform);
             }
         }
         for (int y = 0; y < sizeH; y++)
@@ -40,11 +42,22 @@ public class GameController : MonoBehaviour {
             for (int x = 0; x < sizeW; x++)
             {
                 GameObject planes = Instantiate(plane);
-                planes.transform.position += new Vector3(x, y, -1);
-                //Debug.Log("Block");
+                planes.transform.position += new Vector3(x, y, -0.5f);
+                planes.transform.SetParent(transform);
             }
         }
-        return null;
+
+        float cameraX = sizeW / 2;
+        float cameraY = sizeH / 2;
+        float cameraZ = cameraX * cameraY;
+
+        //16x16 Feld - Position muss Coordinate (7.5, 7.5, -28) haben
+        //15x15 Feld - Position muss Coordinate (7, 7, -26) haben
+        //Problem nur bei Gerade Feldern
+        //ungerade genau in Mitte       z achse nicht richtig
+
+        maincamera.transform.position = new Vector3(cameraX,cameraY,-cameraZ);
+
     }
 
 }
