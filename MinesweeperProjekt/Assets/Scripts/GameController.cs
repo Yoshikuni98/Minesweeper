@@ -11,28 +11,38 @@ public class GameController : MonoBehaviour {
     public Button Smiley_Erstaunt;
     public Button Smiley_Cool;
     public Button Smiley_Traunrig;
-    public GameObject Block;
-
+    public GameObject cube;
+    public GameObject plane;
     
 
     void Start()
     {
+        GridGen();
     }
 
     void Update()
     {
-        GridGen();
     }
 
     GameObject GridGen()
     {
-        int size = sizeH * sizeW;
-        GameObject[] GridBlock = new GameObject[size];
         for (int y = 0; y < sizeH; y++)
         {
-            GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            cube.transform.position += new Vector3(0, 1, 0);
-            return cube;
+            for (int x = 0; x < sizeW; x++)
+            {
+                GameObject cubes = Instantiate(cube);
+                cubes.transform.position += new Vector3(x, y, 0);
+                //Debug.Log("Block");
+            }
+        }
+        for (int y = 0; y < sizeH; y++)
+        {
+            for (int x = 0; x < sizeW; x++)
+            {
+                GameObject planes = Instantiate(plane);
+                planes.transform.position += new Vector3(x, y, -1);
+                //Debug.Log("Block");
+            }
         }
         return null;
     }
