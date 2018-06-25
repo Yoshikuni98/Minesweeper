@@ -10,9 +10,8 @@ public class GameController : MonoBehaviour {
     public Button Smiley_Erstaunt;
     public Button Smiley_Cool;
     public Button Smiley_Traunrig;
-    public GameObject cube;
-    public GameObject plane;
     public Camera maincamera;
+    public GameObject block;
     float cameraZ;
     
 
@@ -27,24 +26,18 @@ public class GameController : MonoBehaviour {
 
     void GridGen()
     {
+        int counter = 0;
         for (int y = 0; y < sizeH; y++)
         {
             for (int x = 0; x < sizeW; x++)
             {
-                GameObject cubes = Instantiate(cube);
-                cubes.transform.position += new Vector3(x, y, 0);
-                cubes.transform.SetParent(transform);
+                GameObject blocks = Instantiate(block);
+                blocks.transform.position += new Vector3(x, y, -0.55f);
+                blocks.transform.SetParent(transform);
+                counter++;
             }
         }
-        for (int y = 0; y < sizeH; y++)
-        {
-            for (int x = 0; x < sizeW; x++)
-            {
-                GameObject planes = Instantiate(plane);
-                planes.transform.position += new Vector3(x, y, -0.55f);
-                planes.transform.SetParent(transform);
-            }
-        }
+        Debug.Log("Blocks: " + counter);
 
         float cameraX = sizeW / 2;
         float cameraY = sizeH / 2;
