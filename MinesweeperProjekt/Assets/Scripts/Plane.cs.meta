@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8b3be60911d88ee42974cde01cbad2a1
+timeCreated: 1529937377
+licenseType: Pro
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - standardPlane: {fileID: 21300000, guid: 7b3747ececfa8774c99b1dca8e6f23eb, type: 3}
+  - flagPlane: {fileID: 21300000, guid: 8ae92efdabe08124fb632b750bfbe617, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
