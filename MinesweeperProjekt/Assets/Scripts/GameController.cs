@@ -6,12 +6,8 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour {
     public int sizeH = 9;
     public int sizeW = 9;
-    public Button Smiley_Normal;
-    public Button Smiley_Erstaunt;
-    public Button Smiley_Cool;
-    public Button Smiley_Traunrig;
     public Camera maincamera;
-    public GameObject block;
+    public GameObject quad;
     float cameraZ;
     
 
@@ -31,13 +27,13 @@ public class GameController : MonoBehaviour {
         {
             for (int x = 0; x < sizeW; x++)
             {
-                GameObject blocks = Instantiate(block);
-                blocks.transform.position += new Vector3(x, y, -0.55f);
-                blocks.transform.SetParent(transform);
+                GameObject quads = Instantiate(quad);
+                quads.transform.position += new Vector3(x, y, -0.55f);
+                quads.transform.SetParent(transform);
                 counter++;
             }
         }
-        Debug.Log("Blocks: " + counter);
+        Debug.Log("Quads: " + counter);
 
         float cameraX = sizeW / 2;
         float cameraY = sizeH / 2;
@@ -53,7 +49,7 @@ public class GameController : MonoBehaviour {
         //ungerade genau in Mitte       z achse nicht richtig
 
         maincamera.transform.position = new Vector3(cameraX,cameraY,maincamera.transform.position.z);
-        maincamera.orthographicSize = 14;
+        maincamera.orthographicSize = 7;
     }
 
     

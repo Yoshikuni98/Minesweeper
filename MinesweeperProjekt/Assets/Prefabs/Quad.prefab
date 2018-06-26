@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1664612697548274}
+  m_IsPrefabParent: 1
+--- !u!1 &1664612697548274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4007321414829676}
+  - component: {fileID: 33100574158849802}
+  - component: {fileID: 64753352694984846}
+  - component: {fileID: 23320115447764266}
+  - component: {fileID: 114279028692614068}
+  m_Layer: 0
+  m_Name: Quad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4007321414829676
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1664612697548274}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23320115447764266
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1664612697548274}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: af9603c15f857ad42a250205f032aeed, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &33100574158849802
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1664612697548274}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &64753352694984846
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1664612697548274}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114279028692614068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1664612697548274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3be60911d88ee42974cde01cbad2a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standard: {fileID: 21300000, guid: 208946b2d415fb841b465a4b906f3b45, type: 3}
+  standard_pressed: {fileID: 21300000, guid: c91daa76e64f9d94b9ee1c6d0c5d780c, type: 3}
+  flag: {fileID: 21300000, guid: 064e35489ed34e84382f92e1e5498170, type: 3}
+  bomb: {fileID: 21300000, guid: 17ce339ffbd4a5141841ec64038d4e74, type: 3}
+  bombExplode: {fileID: 21300000, guid: 1009d8e18a95c484291bc5ba35748b2c, type: 3}
+  arr:
+  - {fileID: 21300000, guid: 0d4f38a0ff6a65b419701579c6175fc8, type: 3}
+  - {fileID: 21300000, guid: 40386ad0767d016439181b6218209ca7, type: 3}
+  - {fileID: 21300000, guid: 4fc73737870f26e429569db27dc65226, type: 3}
+  - {fileID: 21300000, guid: 0217d304fb04b3948bb00aee8a68de3f, type: 3}
+  - {fileID: 21300000, guid: 64b72ced722b8804ab11c49b6a72bed6, type: 3}
+  - {fileID: 21300000, guid: f5a9febfda16a8247a65dfceef9c7c68, type: 3}
+  - {fileID: 21300000, guid: 1c6c1a0e5365ea743a236209853d80d5, type: 3}
+  - {fileID: 21300000, guid: 2e39b8b1ca4fd8f448840c8503d4929c, type: 3}
