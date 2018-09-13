@@ -2,41 +2,52 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Quads : MonoBehaviour {
+public class Quads : MonoBehaviour
+{
 
     public Sprite standard;
-    public Sprite standard_pressed;
+    public Sprite pressed;
     public Sprite flag;
     public Sprite bomb;
     public Sprite bombExplode;
-    bool isPressed = false;
+    public Sprite[] quadNumbers;
+    [SerializeField]
+    bool Pressed = false;
 
-    public Sprite[] arr;
+    void Start()
+    {
 
+    }
 
     void OnMouseOver()
     {
         string links = "Linksklick";
         string rechts = "Rechtsklick";
         string beide = "Beide";
-
-        if (Input.GetMouseButtonDown(0) && Input.GetMouseButtonDown(1))
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (Input.GetMouseButton(0) || Input.GetMouseButton(1) || Input.GetMouseButton(2) && !Pressed)
         {
-            isPressed = true;
-            print(beide);
+            print(Pressed);
+            spriteRenderer.sprite = pressed;
+            Pressed = true;
         }
         else
         {
-            isPressed = false;
+            spriteRenderer.sprite = standard;
+            Pressed = false;
         }
-        if (Input.GetMouseButtonDown(0) && !isPressed)
+        if (Input.GetMouseButtonUp(0) && Input.GetMouseButtonUp(1) || Input.GetMouseButtonUp(2))
+        {
+            print(beide);
+        }
+        else if (Input.GetMouseButtonUp(0))
         {
             print(links);
         }
-        if (Input.GetMouseButtonDown(1) && !isPressed)
+        else if (Input.GetMouseButtonUp(1))
         {
             print(rechts);
         }
-        //this.GetComponent<SpriteRenderer>();
+
     }
 }
